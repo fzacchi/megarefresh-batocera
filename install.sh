@@ -18,7 +18,7 @@ chmod +x megarefresh-onstart.sh
 chmod +x megarefresh-onend.sh
 
 cp "es_systems.cfg" "/usr/share/batocera/datainit/system/.emulationstation/"
-cp "emulatorlauncher.py" "/usr/lib/python2.7/site-packages/configgen/"
+sed -i 's/videoMode.changeMode(wantedGameMode)/#videoMode.changeMode(wantedGameMode)/g' /usr/lib/python2.7/site-packages/configgen/emulatorlauncher.py
 
 /recalbox/scripts/recalbox-save-overlay.sh
 
