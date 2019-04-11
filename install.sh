@@ -20,11 +20,11 @@ chmod +x megarefresh-onend.sh
 #cp "es_systems.cfg" "/usr/share/batocera/datainit/system/.emulationstation/"
 
 if ! grep "<command>/recalbox" /usr/share/batocera/datainit/system/.emulationstation/es_systems.cfg ; then
-	sed -i 's/<command>/<command>/recalbox/scripts/megarefresh/megarefresh-onstart.sh %SYSTEM% %EMULATOR% %ROM% ; /g' /usr/share/batocera/datainit/system/.emulationstation/es_systems.cfg
+	sed -i 's/"<command>"/"<command>/recalbox/scripts/megarefresh/megarefresh-onstart.sh %SYSTEM% %EMULATOR% %ROM% ; "/g' /usr/share/batocera/datainit/system/.emulationstation/es_systems.cfg
 fi
 
 if ! grep "megarefresh-onend.sh</command>" /usr/share/batocera/datainit/system/.emulationstation/es_systems.cfg ; then
-	sed -i 's/</command>/ ; /recalbox/scripts/megarefresh/megarefresh-onend.sh</command>/g' /usr/share/batocera/datainit/system/.emulationstation/es_systems.cfg
+	sed -i 's/"</command>"/" ; /recalbox/scripts/megarefresh/megarefresh-onend.sh</command>"/g' /usr/share/batocera/datainit/system/.emulationstation/es_systems.cfg
 fi
 
 if ! grep "#videoMode.changeMode(wantedGameMode)" /usr/lib/python2.7/site-packages/configgen/emulatorlauncher.py ; then
