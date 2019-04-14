@@ -48,6 +48,8 @@ This version of the script has been tested on Batocera 5.21 only. Due to Batocer
 
 There is no configuration needed after installation, everything should be completely automatic. MegaRefresh will launch each game or system at the proper refresh and set the 60 Hz standard one upon exiting back into EmulationStation. It will auto-detect and maintain your monitor's native resolution.
 
+It's recommended to disable bezels and use integer scaling if you wish to use MegaRefresh together with the Retro or Scanline shaders, but feel free to experiment.
+
 There is still some scrolling micro-stuttering at times even when using MegaRefresh: setting Threaded Video to OFF in the RetroArch cores seems to help, if your Pi is powerful enough (3B+ is).
 
 The experimental lr-mame2003-plus core currently doesn't work as expected with the standard settings, causing very choppy scrolling. The fix is setting "Bypass audio skew" as disabled in the core's quick menu/options section (last on the bottom). The option is present only in very recent builds of the core, since 1.7.6 onwards. Every other libretro arcade core works as it should.
@@ -86,7 +88,9 @@ Please test it with every monitor and Pi version out there and let me know what 
 
 #### Donate
 
-MegaRefresh is the result of a lot of trial and error, research and experimentation. In particular getting from a working proof of concept to its present release version has proven to require a substantial amount of work. I'm delighted to finally be able to contribute something back to the emulation community, but if you wish to show a token of appreciation and support further development please consider donating any amount of your choice at https://www.paypal.me/zacchi
+MegaRefresh is the result of a lot of trial and error, research and experimentation. In particular getting from a working proof of concept to its present release version for three platforms has proven to require a substantial amount of work.
+
+I'm delighted to finally be able to contribute something back to the emulation community, but if you wish to show a token of appreciation and support further development please consider donating any amount of your choice at https://www.paypal.me/zacchi
 
 Thanks :)
 
